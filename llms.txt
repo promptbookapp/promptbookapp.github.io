@@ -1,0 +1,44 @@
+# Prompt Book: AI Video Prompts
+
+> Prompt Book is a free Android app with a library of ready-to-use prompts for AI video and image generators. Users pick a niche (category), copy a prompt in one tap, paste it into the AI tool of their choice, and create content for YouTube Shorts, TikTok, Facebook Reels and Instagram Reels. The app does not generate videos itself, and it does not create social media accounts.
+
+Publisher: Mansoor Khan Academy
+Contact: mansoorkhan8185@gmail.com
+Platform: Android (Google Play release coming soon)
+Price: Free, contains ads
+Language: English
+
+## Main pages
+
+- [Home page](https://promptbookapp.github.io/): Overview of the app, how it works, niches, platforms, getting-started checklist, screenshots and FAQ.
+- [Privacy Policy](https://mansoorkhan8185.github.io/Prompt-BooK-Privacy-Policy/): How the app handles data, including advertising.
+
+## How it works
+
+1. Choose a niche from the app's categories, or search by keyword.
+2. Tap Copy on a prompt. Each prompt is already written in detail.
+3. Paste it into any AI tool that accepts text prompts, create the video or image, and post it on your own channel.
+
+## Categories (niches)
+
+- Cinematic: movie-style scenes and dramatic shots.
+- Miniature & 3D: tiny worlds, paper-craft and 3D scenes.
+- Product & Food: food shots and clean product visuals for brands and shops.
+- Sci-Fi & Fantasy: futuristic worlds, dragons and magic.
+- Nature & Wildlife: realistic animal and landscape scenes.
+- Funny Animation: playful characters and short gags.
+- Luxury Car: sleek car visuals and cinematic drives.
+- Cyberpunk: neon cities and futuristic characters.
+
+More categories (for example Anime, Islamic Art, Horror & Dark, Fashion & Beauty, Architecture & Interiors, Travel & Cities, Sports & Action, Emotional Stories, Abstract & Surreal, Retro & Vintage, Mythology & History, Space & Astronomy, Underwater World, Music & Dance) are added over time, and new prompts are added regularly.
+
+## Common questions
+
+- Is it free? Yes. The app is free and contains ads.
+- Does it create videos? No. It provides prompts to use with another AI tool.
+- Does it create YouTube, TikTok, Facebook or Instagram accounts? No. Users create their own accounts on each platform.
+- Does it promise income? No. Results depend on the creator's content, consistency and each platform's rules.
+
+## Notes
+
+Prompt Book is not affiliated with or endorsed by YouTube, Google, TikTok, Meta, Facebook or Instagram.
