@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://promptbookapp.github.io/sitemap.xml
