@@ -11,6 +11,7 @@ Language: English
 ## Main pages
 
 - [Home page](https://promptbookapp.github.io/): Overview of the app, how it works, niches, platforms, getting-started checklist, screenshots and FAQ.
+- [YouTube channel](https://www.youtube.com/@PromptBookOfficial): Short videos made from Prompt Book prompts.
 - [Privacy Policy](https://mansoorkhan8185.github.io/Prompt-BooK-Privacy-Policy/): How the app handles data, including advertising.
 
 ## How it works
