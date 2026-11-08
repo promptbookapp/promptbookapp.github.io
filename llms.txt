@@ -4,7 +4,7 @@
 
 Publisher: Mansoor Khan Academy
 Contact: mansoorkhan8185@gmail.com
-Platform: Android (Google Play release coming soon)
+Platform: Android (Google Play closed testing; join the testers group to install: https://groups.google.com/g/mansoor-app-testers , then https://play.google.com/store/apps/details?id=com.mkhanacademy.promptbookapp )
 Price: Free, contains ads
 Language: English
 
