@@ -89,6 +89,12 @@ details p{margin:10px 0 0;color:var(--muted)}
 footer{padding:36px 0 48px;color:var(--muted);font-size:.9rem;text-align:center}
 footer a{color:var(--muted)}
 .early{margin-top:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);border-radius:14px;padding:14px 18px;color:#fff;font-size:.95rem;text-align:left}.early ol{margin:8px 0 0;padding-left:20px}.early a{color:#fff;font-weight:700;text-decoration:underline}
+.lib{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.lib .p{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.lib .p img{width:100%;aspect-ratio:9/12;object-fit:cover;display:block;background:var(--brand-soft)}
+.lib .p div{padding:10px 12px}
+.lib .p b{display:block;font-size:.92rem;line-height:1.3}
+.lib .p small{color:var(--muted);font-size:.78rem}
 .note{font-size:.82rem;color:var(--muted);margin-top:14px}
 </style>
 </head>
@@ -194,6 +200,12 @@ footer a{color:var(--muted)}
   </div>
 </section>
 
+<section id="library" style="display:none">
+  <h2>Fresh from the app</h2>
+  <p class="sub">A live preview of prompts inside Prompt Book. Open the app to copy the full prompt.</p>
+  <div id="libGrid" class="lib"></div>
+</section>
+
 <section id="faq">
   <h2>Questions</h2>
   <details><summary>Is Prompt Book free?</summary><p>Yes, the app is free to use. It contains ads.</p></details>
@@ -243,6 +255,31 @@ footer a{color:var(--muted)}
     if (LIVE) { b.href = PLAY_URL; }
     else { b.href = GROUP_URL; b.textContent = "Join early access (free)"; }
   });
+
+  // Live prompt preview from the app's database (same public source the app reads).
+  (function () {
+    var DB = "https://prompt-book-3aa95-default-rtdb.firebaseio.com/prompts.json";
+    var covers = "covers/";
+    fetch(DB).then(function (r) { return r.json(); }).then(function (data) {
+      var list = Array.isArray(data) ? data : Object.keys(data || {}).map(function (k) { return data[k]; });
+      // Only real AI-made images (full web links); the old built-in placeholder covers are skipped.
+      list = list.filter(function (p) { return p && p.title && /^https?:/i.test(String(p.image || "")) && !/pollinations\.ai/i.test(p.image) && p.show !== false && String(p.show) !== "false"; });
+      for (var i = list.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = list[i]; list[i] = list[j]; list[j] = t; }
+      list = list.slice(0, 12);
+      if (list.length < 3) return;
+      var g = document.getElementById("libGrid");
+      list.forEach(function (p) {
+        var src = /^https?:/i.test(p.image) ? p.image : covers + String(p.image).replace(/^covers\//, "");
+        var d = document.createElement("div"); d.className = "p";
+        var im = document.createElement("img"); im.loading = "lazy"; im.alt = p.title + " AI prompt"; im.src = src;
+        im.onerror = function () { d.style.display = "none"; };
+        var b = document.createElement("div"), t = document.createElement("b"), c = document.createElement("small");
+        t.textContent = p.title; c.textContent = p.category || ""; b.appendChild(t); b.appendChild(c);
+        d.appendChild(im); d.appendChild(b); g.appendChild(d);
+      });
+      document.getElementById("library").style.display = "";
+    }).catch(function () {});
+  })();
 </script>
 </body>
 </html>
